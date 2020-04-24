@@ -1,0 +1,137 @@
+
+
+/*  ESTILOS COMUNES DEL PROYECTO */
+
+
+/* Le saco los margenes del body */
+body{
+    margin: 0;
+
+}
+
+/* Para que se vea en todo el documento y le doy un color de fondo */
+header{
+    width: 100%;
+    background: #4E94AB;
+}
+
+body{
+    background: rgb(104, 105, 105);
+}
+
+section{
+    background: rgb(64, 65, 65);
+}
+
+#btn_menu{
+    display: none; /* Hago desaparecer el checkbox que sera el que active y desactive el menu en celulares */
+}
+
+/* Menu para celular */
+header label{
+    display: none;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+
+}
+
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+h1{
+    color : white;
+}
+
+
+/*  FIN ESTILOS COMUNES DEL PROYECTO */
+
+
+/*  ESTILO MENU PC */
+
+
+.menu_principal ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    border-left: 1px solid white;
+    display: flex; /* Flexbox por defecto coloca los LI en fila */
+    /* justify-content: flex-end; --> para mover la ubicacion del menu (del flex) */
+}
+
+/* Los LI se distribuyen automaticamende de forma uniforme dentro del UL */
+.menu_principal li{
+    flex-grow: 1; /* Se centran en toda la pantalla de forma automatica */
+    text-align: center;
+    border-right: 1px solid white;
+}
+
+
+.menu_principal li a{
+    display: block; 
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none; /* saco subrayado del hipervinculo */
+}
+
+.menu_principal li:hover{
+    background: rgba(0,0,0,0.3);
+
+}
+
+.menu_principal span{
+    padding: 5px;
+}
+
+/* FIN ESTILO MENU PC */
+
+/* ESTILO MENU CELULAR */
+/* tamaño para resoluciones inferiores a 768px (tablet) */
+@media (max-width:768px){
+    header label{
+        display: block;
+        width: 100%;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .menu_principal{
+        position: absolute;
+        background: #4E94AB;
+        width: 70%;
+        margin-left: -70%; /* Oculto el menu principal y lo muestro con el checked al tildar que pasa a 0 */
+        transition: all 0.5s; /* efecto de tiempo para que no aparezca y desaparezca bruscamente */
+    }
+    
+
+    .menu_principal ul{
+        flex-direction: column; /* El menu se vera de forma de columna */
+    }
+
+    .menu_principal li{
+        border-top: 1px solid white;
+    }
+
+    /* Cuando es checked muestro el menu principal */
+    #btn_menu:checked ~ .menu_principal{
+        margin: 0;
+    }
+
+    .icon-menu3{
+        padding: 5px;
+    }
+}
+
+/* FIN ESTILO MENU CELULAR */
+
+/* ESTILO PLANTILLA INICIAL */
+.listPeliculas ul{
+    margin:0;
+    list-style: none;
+    padding: 0;
+}
+
+
+/* FIN ESTILO PLANTILLA INICIAL */

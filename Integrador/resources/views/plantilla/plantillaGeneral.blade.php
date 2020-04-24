@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/stilos.css">
+	<link rel="stylesheet" href="css/estilos.css">
 
 	<!-- ICONOS -->
 	<link rel="stylesheet" href="css/fontsMenu.css">
@@ -19,7 +19,20 @@
 </head>
 <body>
     <header>
-        <h1>BIENVENIDOS</h1>
+        <!-- Menu principal celular-->
+            <input type="checkbox" id="btn_menu">
+        <label for="btn_menu"><span class="icon-menu3"></span>MENU</label>
+        
+        <!-- Menu princila PC-->
+        <nav class="menu_principal">
+            <ul>
+                <li><a href=""><span class="icon-profile"></span>PRINCIPAL</a></li>
+                <li><a href=""><span class="icon-clipboard"></span>PELICULAS</a></li>
+                <li><a href=""><span class="icon-spell-check"></span>ACTORES</a></li>
+                <li><a href=""><span class="icon-stats-bars"></span>TITULOS</a></li>
+                <li><a href=""><span class="icon-coin-dollar"></span>ABM</a></li>
+            </ul>
+        </nav>
     </header>
     
     <section>
@@ -27,7 +40,7 @@
     </section>
 
     <footer>
-        <h3>PROYECTO ELEVORADO POR JUAN REALE</h3>    
+        <h6>PROYECTO DE JUAN REALE</h6>    
     </footer>
 
 </body>
