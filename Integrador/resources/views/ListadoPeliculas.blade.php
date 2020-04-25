@@ -10,7 +10,7 @@
                 <ul >
                 @foreach ($peliculasAleatorias as $peliculaRW)
                     <li>
-                        <a href="">{{$peliculaRW["title"]}}</a>
+                        <a href="/detalle/{{$peliculaRW->id}}">{{$peliculaRW["title"]}}</a>
                     </li>
                 @endforeach
                 </ul>
@@ -20,7 +20,7 @@
                 <ul>
                 @foreach ($peliculasUltimas as $peliculaUlt)
                     <li>
-                        <a href="">{{$peliculaUlt["title"]}}</a>
+                        <a href="/detalle/{{$peliculaUlt->id}}">{{$peliculaUlt["title"]}}</a>
                     </li>
                 @endforeach
                 </ul>

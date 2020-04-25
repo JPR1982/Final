@@ -21,4 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get("/inicial","PeliculasController@Listado");
 
-Route::get("/detalle","PeliculasController@DetallePeliculas");
+Route::get("/detalle/{id}","PeliculasController@Detalle");
+
+

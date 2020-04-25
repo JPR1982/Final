@@ -15,4 +15,13 @@ class PeliculasController extends Controller
         //dd($peliculasUltimas5);
         return view("ListadoPeliculas", compact("peliculasUltimas","peliculasAleatorias")); 
     }
+
+    public function Detalle($id)
+    {
+        $detallePelicula = Pelicula::find($id);
+        //dd($detallePelicula);
+
+        return view("DetallePelicula",compact("detallePelicula"));
+    }
+
 }
