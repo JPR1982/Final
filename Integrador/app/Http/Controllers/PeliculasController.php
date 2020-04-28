@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pelicula;
+use App\Actor;
+use App\Genero;
 
 
 class PeliculasController extends Controller
@@ -18,10 +20,41 @@ class PeliculasController extends Controller
 
     public function Detalle($id)
     {
-        $detallePelicula = Pelicula::find($id);
-        //dd($detallePelicula);
+        $detalle = Pelicula::find($id);
+        
+        //dd($detalle->Actores);
+        return view("DetallePelicula",compact("detalle"));
+    }
 
-        return view("DetallePelicula",compact("detallePelicula"));
+    public function Titulos()
+    {
+        $titulos = Pelicula::paginate(5);
+        $generos = Genero::all();
+        //dd($generos);
+        //dd($titulos->Genero);
+        return view("TitulosPeliculas",compact("titulos","generos"));
+
+    }
+
+    public function TitulosPorGenero(Request $request)
+    {
+        $id = ($request->input("genero"));
+        $titulos = Pelicula::where("genre_id","=","$id")->paginate(5);
+        $generos = Genero::all();
+
+        
+        return view("TitulosPeliculas",compact("titulos","generos"));
+    }
+
+    public function BuscarTitulos(Request $request)
+    {
+        $filtro = ($request->input("filtro"));
+        //dd($filtro);
+
+        $titulos = Pelicula::where("title","LIKE","%$filtro%")->paginate(5);
+        $generos = Genero::all();
+        
+        return view("TitulosPeliculas",compact("titulos","generos"));
     }
 
 }

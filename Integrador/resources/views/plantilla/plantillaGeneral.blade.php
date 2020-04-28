@@ -30,7 +30,7 @@
                 <li><a href="/inicial"><span class="icon-profile"></span>PRINCIPAL</a></li>
                 <li><a href=""><span class="icon-clipboard"></span>PELICULAS</a></li>
                 <li><a href=""><span class="icon-spell-check"></span>ACTORES</a></li>
-                <li><a href=""><span class="icon-stats-bars"></span>TITULOS</a></li>
+                <li><a href="/titulos"><span class="icon-stats-bars"></span>TITULOS</a></li>
                 <li><a href=""><span class="icon-coin-dollar"></span>ABM</a></li>
             </ul>
         </nav>

@@ -133,5 +133,11 @@ h1{
     padding: 0;
 }
 
-
 /* FIN ESTILO PLANTILLA INICIAL */
+
+/* ESTILO DETALLE PELICULA */
+.listPeliculas ul{
+    text-align: left;
+}
+
+/* FIN ESTILO DETALLE PELICULA */

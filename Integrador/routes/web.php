@@ -23,4 +23,11 @@ Route::get("/inicial","PeliculasController@Listado");
 
 Route::get("/detalle/{id}","PeliculasController@Detalle");
 
+Route::get("/titulos","PeliculasController@Titulos");
+
+Route::post("/titulos","PeliculasController@TitulosPorGenero");
+
+Route::post("/titulosfiltro","PeliculasController@BuscarTitulos");
+
+Route::get("/generos","GenerosController@Listado");
 
